@@ -8,17 +8,11 @@
 
 // sum(20) = 28
 
-let sumNum = 0;
-
-function sum(item) {
-    
-    sumNum = sumNum + item;
-    console.log(sumNum);
-    
-}
-
-sum(3);
-sum(5);
-sum(20);
+let sum = (function() {
+    let sumNum = 0;
+    return function (item) {
+        return sumNum = sumNum + item;
+    }
+})();
 
 
